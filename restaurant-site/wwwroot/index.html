@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="Seasonal cooking, poured with care. Discover the menu and reserve your table at Sorella, your neighborhood Italian kitchen.">
+  <title>Sorella — a table for the good things</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#" aria-label="Sorella home">sorella<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="#story">Our table</a><a href="#menu">The menu</a><a href="#visit">Find us</a></nav>
+    <a class="nav-reserve" href="#reserve">Reserve a table <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="story">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-rule"></span> YOUR NEIGHBORHOOD ITALIAN</div>
+        <h1>A table for<br>the <em>good things.</em></h1>
+        <p>Long lunches, one-more-glass dinners, and food that feels like being welcomed home. Pull up a chair.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#reserve">Save your seat <span>↗</span></a><a class="quiet-link" href="#menu">See what's cooking <span>↓</span></a></div>
+        <div class="hero-note"><span class="note-spark">✳</span> Seasonal ingredients. Always room for one more.</div>
+      </div>
+      <div class="hero-photo" role="img" aria-label="A warmly lit Italian restaurant table set for a meal">
+        <div class="photo-overlay"></div><div class="image-label"><span>THE SLOW FOOD CLUB</span><strong>Good food.<br>Better company.</strong></div>
+        <div class="photo-stamp">MADE<br>WITH<br>AMORE <span>✳</span></div>
+        <div class="photo-credit">A little corner of Italy, right around the corner.</div>
+      </div>
+      <div class="hero-side-note">EST. WITH LOVE · 2018</div>
+    </section>
+
+    <section class="intro-strip" aria-label="Restaurant highlights">
+      <span>Good things take time</span><i>✳</i><span>Local farms, happy plates</span><i>✳</i><span>Made for sharing</span><i>✳</i><span>Stay for dessert</span>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-top">
+        <div><div class="eyebrow"><span class="eyebrow-rule"></span> FROM OUR KITCHEN</div><h2>A little taste<br>of <em>what we love.</em></h2></div>
+        <div class="menu-intro"><p>Inspired by the seasons, guided by the growers, and best enjoyed with people you like.</p><span>Our menu changes with the market. These are a few current favorites.</span></div>
+      </div>
+      <div class="menu-filters" role="group" aria-label="Filter menu"><button class="filter active" data-category="All" aria-pressed="true">Everything <span>06</span></button><button class="filter" data-category="Starters" aria-pressed="false">To begin</button><button class="filter" data-category="Mains" aria-pressed="false">The good stuff</button><button class="filter" data-category="Dessert" aria-pressed="false">Something sweet</button></div>
+      <div class="menu-grid" id="menu-grid" aria-live="polite"><p class="menu-loading">Setting the table...</p></div>
+      <p class="menu-footnote">Vegetarian dishes marked <span>✳</span> · Please let us know about any allergies.</p>
+    </section>
+
+    <section class="quote-band">
+      <span class="quote-mark">“</span>
+      <blockquote>There is no love sincerer<br>than the love of food.</blockquote>
+      <span class="quote-credit">GEORGE BERNARD SHAW, PROBABLY HERE ONCE</span>
+      <span class="quote-decoration">✳</span>
+    </section>
+
+    <section class="visit-section" id="visit">
+      <div class="visit-copy"><div class="eyebrow"><span class="eyebrow-rule"></span> COME ON IN</div><h2>Your seat is<br><em>waiting.</em></h2><p>Whether it's a Tuesday treat or a little something to celebrate, there's a place at our table for you.</p>
+        <div class="visit-details"><div><span class="detail-icon">⌖</span><span><b>Find our little corner</b><small>28 Olive Street, Brooklyn, NY 11211</small></span></div><div><span class="detail-icon">◷</span><span><b>Pull up a chair</b><small>Tue–Sun, 12pm–10pm · Mondays off</small></span></div></div>
+        <a class="quiet-link map-link" href="https://maps.google.com/?q=28+Olive+Street+Brooklyn+NY" target="_blank" rel="noreferrer">Get directions <span>↗</span></a>
+      </div>
+      <div class="reservation-card" id="reserve">
+        <div class="reservation-heading"><div><span class="eyebrow">A PLACE AT THE TABLE</span><h3>Let's make it a date.</h3></div><span class="reservation-flower">✳</span></div>
+        <p class="reservation-subtitle">Tell us when. We'll have the good plates ready.</p>
+        <form id="reservation-form">
+          <label>Your name<input name="name" autocomplete="name" minlength="2" maxlength="80" placeholder="How should we greet you?" required></label>
+          <label>Email for your confirmation<input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@somewhere.com" required></label>
+          <div class="form-row"><label>When<input name="date" type="date" required></label><label>What time<select name="time" required><option value="">Pick a time</option><option>12:00</option><option>12:30</option><option>13:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option></select></label></div>
+          <label>How many hungry people?<select name="guests"><option value="1">Just me</option><option value="2" selected>Two of us</option><option value="3">3 people</option><option value="4">4 people</option><option value="5">5 people</option><option value="6">6 people</option><option value="7">7 people</option><option value="8">8 people</option><option value="9">9 people</option><option value="10">10 people</option><option value="11">11 people</option><option value="12">12 people</option></select></label>
+          <button class="button button-dark submit-button" type="submit"><span>Request your table</span><span>↗</span></button>
+          <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+        </form>
+        <div class="reservation-fineprint">For parties of 7 or more, call us at (718) 555-0142.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="wordmark" href="#">sorella<span>.</span></a><span>Good food, good people, always.</span><span>© SORELLA 2026 · MADE WITH AMORE</span></footer>
+</body>
+</html>
