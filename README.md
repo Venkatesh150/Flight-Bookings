@@ -13,6 +13,22 @@ Requires Python 3.10 or later; there are no third-party dependencies.
 
 Open [http://127.0.0.1:5000](http://127.0.0.1:5000).
 
+## Run with Docker
+
+Build the image from the project directory:
+
+```bash
+docker build -t wayfarer .
+```
+
+Start the container and publish its port:
+
+```bash
+docker run --rm -p 5000:5000 wayfarer
+```
+
+Open [http://localhost:5000](http://localhost:5000).
+
 ## What works
 
 - Search sample one-way flights between 10 destinations.

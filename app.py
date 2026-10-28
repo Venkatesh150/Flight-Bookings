@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import secrets
 from datetime import date
@@ -205,8 +206,10 @@ class WayfarerHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server = ThreadingHTTPServer(("127.0.0.1", 5000), WayfarerHandler)
-    print("Wayfarer is running at http://127.0.0.1:5000")
+    host = os.environ.get("HOST", "127.0.0.1")
+    port = int(os.environ.get("PORT", "5000"))
+    server = ThreadingHTTPServer((host, port), WayfarerHandler)
+    print(f"Wayfarer is running at http://{host}:{port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
