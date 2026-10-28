@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5f0">
+    <meta name="description" content="Find your next flight with Wayfarer — thoughtful fares and a little help from your AI trip concierge.">
+    <title>Wayfarer — go somewhere wonderful</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script defer src="/static/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Wayfarer home"><span class="brand-mark">w.</span> wayfarer</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-active" href="#flights">Flights</a>
+        <a href="#inspiration">Explore</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <a class="header-cta" href="#flights">Plan a trip <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="inspiration">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> A better way to get there</div>
+          <h1>The world is<br>closer than <span>you think.</span></h1>
+          <p>Find thoughtful fares, faraway places, and a little more room for wonder.</p>
+          <a class="text-link" href="#flights">Find your next flight <span aria-hidden="true">↓</span></a>
+          <div class="hero-footnote"><span class="avatar-stack"><i>M</i><i>A</i><i>J</i></span><span>Loved by curious travelers everywhere</span></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="A plane flying over a dreamy mountain landscape">
+          <div class="sun"></div><div class="distant-mountain"></div><div class="near-mountain"></div>
+          <div class="flight-path"></div><div class="paper-plane">✈</div>
+          <div class="art-caption"><span class="caption-icon">✳</span><span>Somewhere new<br><strong>looks good on you.</strong></span></div>
+          <div class="art-index">01 <span>/</span> 04</div>
+        </div>
+      </section>
+
+      <section class="search-section" id="flights">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT CHAPTER</div><h2>Where to next?</h2></div>
+          <span class="search-note">A few details. A world of possibilities.</span>
+        </div>
+        <form class="search-card" id="flight-search">
+          <label class="field"><span class="field-label">FROM</span><span class="field-icon">⌖</span>
+            <select name="from" id="from-city" required aria-label="Departure city">
+              <option value="New York" selected>New York</option><option value="London">London</option><option value="Paris">Paris</option><option value="Tokyo">Tokyo</option><option value="Singapore">Singapore</option><option value="Dubai">Dubai</option><option value="Lisbon">Lisbon</option><option value="Reykjavik">Reykjavik</option><option value="Cape Town">Cape Town</option><option value="Bali">Bali</option>
+            </select>
+            <small id="from-code">JFK · United States</small>
+          </label>
+          <button type="button" class="swap-button" id="swap-cities" aria-label="Swap departure and arrival">⇄</button>
+          <label class="field"><span class="field-label">TO</span><span class="field-icon arrival-icon">⌖</span>
+            <select name="to" id="to-city" required aria-label="Arrival city">
+              <option value="New York">New York</option><option value="London">London</option><option value="Paris">Paris</option><option value="Tokyo">Tokyo</option><option value="Singapore">Singapore</option><option value="Dubai">Dubai</option><option value="Lisbon" selected>Lisbon</option><option value="Reykjavik">Reykjavik</option><option value="Cape Town">Cape Town</option><option value="Bali">Bali</option>
+            </select>
+            <small id="to-code">LIS · Portugal</small>
+          </label>
+          <label class="field date-field"><span class="field-label">WHEN</span><span class="field-icon">▦</span>
+            <input id="travel-date" name="date" type="date" required>
+            <small>One-way · Flexible plans</small>
+          </label>
+          <label class="field passenger-field"><span class="field-label">WHO</span><span class="field-icon">♙</span>
+            <select name="passengers" aria-label="Number of passengers">
+              <option value="1">1 traveler</option><option value="2">2 travelers</option><option value="3">3 travelers</option><option value="4">4 travelers</option><option value="5">5 travelers</option><option value="6">6 travelers</option><option value="7">7 travelers</option><option value="8">8 travelers</option><option value="9">9 travelers</option>
+            </select>
+            <small>Ready when you are</small>
+          </label>
+          <button class="search-button" type="submit"><span>Search flights</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="results-area" id="results" aria-live="polite"></div>
+      </section>
+
+      <section class="inspiration-section" id="how-it-works">
+        <div class="inspiration-intro"><div class="eyebrow"><span class="eyebrow-dot"></span> THE WAYFARER WAY</div><h2>Less scrolling.<br><span>More somewhere.</span></h2><p>Travel should feel like possibility, not homework. Start with a spark; we’ll help with the rest.</p></div>
+        <div class="value-card"><span class="value-number">01</span><span class="value-icon">↗</span><h3>Good trips start here</h3><p>Simple, sample fares make it easy to spot an option that feels right.</p></div>
+        <div class="value-card accent-card"><span class="value-number">02</span><span class="value-icon">✳</span><h3>A little human magic</h3><p>Meet your AI trip concierge. Ask a question, get inspired, take off.</p></div>
+        <div class="value-card"><span class="value-number">03</span><span class="value-icon">⌁</span><h3>Make it your own</h3><p>Find a new city, swap your route, and follow the feeling wherever it leads.</p></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark">w.</span> wayfarer</a><span>Made for the joy of getting there.</span><span>Sample fares · Demo bookings</span></footer>
+
+    <aside class="chat-widget" id="chat-widget" aria-label="Wayfarer trip concierge">
+      <section class="chat-panel" id="chat-panel" aria-label="Chat with your trip concierge" hidden>
+        <div class="chat-header"><div class="bot-avatar">✳</div><div><strong>Your trip concierge</strong><small><span class="online-dot"></span> Here for the journey</small></div><button id="close-chat" class="icon-button" aria-label="Close chat">×</button></div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite">
+          <div class="message bot-message">Hi there! I’m your Wayfarer trip concierge. Looking for inspiration, a better fare, or a hand booking your flight?</div>
+          <div class="suggestion-row"><button type="button">Suggest a destination</button><button type="button">How do I find a deal?</button></div>
+        </div>
+        <form id="chat-form" class="chat-input"><input id="chat-text" type="text" maxlength="500" placeholder="Ask me anything..." aria-label="Message your trip concierge" autocomplete="off" required><button aria-label="Send message" type="submit">↑</button></form>
+        <div class="chat-disclaimer">Your friendly demo concierge · Not live travel advice</div>
+      </section>
+      <button class="chat-launcher" id="chat-launcher" aria-expanded="false" aria-controls="chat-panel"><span class="launcher-icon">✳</span><span class="launcher-label">Ask our AI concierge</span><span class="launcher-arrow">↗</span></button>
+    </aside>
+    <dialog class="booking-dialog" id="booking-dialog">
+      <form method="dialog" class="dialog-close-row"><button class="icon-button" aria-label="Close booking dialog">×</button></form>
+      <div class="eyebrow"><span class="eyebrow-dot"></span> ALMOST THERE</div><h2>Make it official.</h2><p class="booking-summary" id="booking-summary"></p>
+      <form id="booking-form" class="booking-form"><input type="hidden" name="flightId"><label>Your name<input name="name" autocomplete="name" required minlength="2" maxlength="80" placeholder="Alex Morgan"></label><label>Email for your confirmation<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="alex@example.com"></label><button class="search-button" type="submit"><span>Confirm demo booking</span><span>↗</span></button></form>
+      <div id="booking-message" class="booking-message" aria-live="polite"></div>
+    </dialog>
+  </body>
+</html>
